@@ -1,0 +1,16 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "dist",
+			"problemMatcher": [],
+			"label": "npm: dist",
+			"detail": "webpack --joplin-plugin-config buildMain && webpack --joplin-plugin-config buildExtraScripts && webpack --joplin-plugin-config createArchive",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		}
+	]
+}
