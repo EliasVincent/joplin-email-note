@@ -1,5 +1,5 @@
 import joplin from "api";
-import { SettingItemType, ToolbarButtonLocation } from "api/types";
+import { MenuItemLocation, ToolbarButtonLocation } from "api/types";
 
 joplin.plugins.register({
   onStart: async function () {
@@ -40,6 +40,31 @@ joplin.plugins.register({
       "email-button",
       "openEmail",
       ToolbarButtonLocation.EditorToolbar
+    );
+
+    await joplin.commands.register({
+      name: "emailSelection",
+      label: "Email Selection",
+      execute: async () => {
+        const currNote = await getCurrentNote();
+        // get selected text
+        const selectedText = await joplin.commands.execute(
+          "selectedText"
+        ) as string;
+        if (selectedText) {
+          openEmail(currNote.title, selectedText);
+        } else {
+          console.info("error with execute emailSelection command");
+        }
+      },
+    });
+
+    // create context menu item to email selection
+    await joplin.views.menuItems.create(
+      "emailSelectionThroughContextMenu",
+      "emailSelection",
+      MenuItemLocation.EditorContextMenu,
+      { accelerator: "Ctrl+Alt+E" }
     );
   },
 });

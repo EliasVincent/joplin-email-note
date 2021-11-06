@@ -8,9 +8,14 @@ A quick overview:
 - Works via the command palette too
 - Filters the # from the headings from your note
     - Only works with correctly spaced `# something` headings
+- Right click selected text to only send the selection
 
 Feel free to tell me your suggestions on how to improve it! 😄
 
+## Credits / Resources
+
+[joplin-plugin-create-note-from-text](https://github.com/ambrt/joplin-plugin-create-note-from-text)
+[joplin API](https://joplinapp.org/api/overview/)
 ---
 
 Original Joplin Plugin Readme:
