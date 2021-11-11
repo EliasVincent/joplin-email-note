@@ -107,7 +107,8 @@ function convertToHTML(content) {
   converter.setOption("tasklists", true);
   converter.setOption("requireSpaceBeforeHeadingText", true)
   converter.setOption("strikethrough", true);
-  
+  converter.setOption("simpleLineBreaks", true);
+
   const html = converter.makeHtml(content);
   return html;
 }
