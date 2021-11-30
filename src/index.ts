@@ -118,6 +118,6 @@ function openEmail(title, content, html: Boolean) {
     ? convertToHTML(content)
     : filterHeadings(content);
   const mailto_link =
-    "mailto:?subject=" + title + "&body=" + encodeURIComponent(filteredContent);
+    "mailto:?subject=" + encodeURIComponent(title) + "&body=" + encodeURIComponent(filteredContent);
   window.location.href = mailto_link;
 }
