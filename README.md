@@ -1,3 +1,7 @@
+# Archive notice
+
+This plugin hasn't been updated in over four years. There are also many shortcomings with it such as not supporting any note attachments such as files or images. I thank everyone who used this plugin.
+
 # Joplin-Email-Note
 
 A very simple Joplin Plugin to send your current note as an email to your browser or email client of choice. ✉
